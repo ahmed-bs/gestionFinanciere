@@ -1,3 +1,5 @@
 <app-navbar></app-navbar>
 <div><router-outlet></router-outlet></div>
-<app-sidebar></app-sidebar>
+<app-sidebar (featureSelected)="onNavigate($event)"></app-sidebar>
+<app-depences *ngIf="loadedFeature === 'depence'"></app-depences>
+<app-adding-depences-items *ngIf="loadedFeature !== 'depence'"></app-adding-depences-items>

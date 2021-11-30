@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Depence</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <a href="#" class="list-groupe-item clearfix" *ngFor="let depence of depences">
+      <div class="pull-left">
+
+        <h4 class="list-groupe-item-heading" name>{{ depence.name }}</h4>
+        <p class="list-groupe-item-text">{{ depence.description }}</p>
+      </div>
+       <span class=" pull-right">
+        <img [src]="depence.imagePath" alt="{{ depence.name }}"  class="img-responsive" style="max-height: 50px ;">
+      </span>
+    </a>
+    <app-depence-item></app-depence-item>
+  </div>
+</div>

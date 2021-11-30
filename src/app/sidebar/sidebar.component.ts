@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
 })
-export class SidebarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class SidebarComponent {
+  @Output() featureSelected = new EventEmitter<string>();
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
   }
-
 }
