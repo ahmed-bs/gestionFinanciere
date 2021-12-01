@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output ,EventEmitter} from '@angular/core';
 import { Transfer } from '../transfer.model';
 
 @Component({
@@ -7,6 +7,9 @@ import { Transfer } from '../transfer.model';
   styleUrls: ['./transfer-list.component.css']
 })
 export class TransferListComponent implements OnInit {
+
+  @Output() transferWasSelected = new EventEmitter<Transfer>();
+
   transfers: Transfer[] = [
     new Transfer(
       'A Test Transfer',
@@ -28,5 +31,9 @@ export class TransferListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onTransferSelected(transfer: Transfer) {
+    this.transferWasSelected.emit(transfer);
+  }
+
 
 }

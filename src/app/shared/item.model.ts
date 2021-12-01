@@ -14,7 +14,7 @@ export class RevenuItem {
     this.amount = amount;
   }
 }
-export class TransfeItem {
+export class TransferItem {
   public name: string;
   public amount: number;
   constructor(name: string, amount: number) {

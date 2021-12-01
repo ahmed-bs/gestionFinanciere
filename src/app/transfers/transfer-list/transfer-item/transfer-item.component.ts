@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output ,Input,EventEmitter} from '@angular/core';
+import { Transfer } from '../../transfer.model';
 
 @Component({
   selector: 'app-transfer-item',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransferItemComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  transfer!: Transfer;
 
-  ngOnInit(): void {
+  @Output()
+  transferSelected = new EventEmitter<void>();
+  constructor() {}
+
+  ngOnInit(): void {}
+  onSelected() {
+    this.transferSelected.emit();
   }
-
 }
