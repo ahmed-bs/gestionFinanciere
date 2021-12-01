@@ -5,3 +5,5 @@
 <app-adding-depences-items *ngIf="loadedFeature !== 'depence'"></app-adding-depences-items>
 <app-revenus *ngIf="loadedRevenu === 'revenu'"></app-revenus>
 <app-adding-revenus-items *ngIf="creatingrevenu === 'creating-revenuitem'"></app-adding-revenus-items>
+<app-transfers *ngIf="loadedRevenu === 'revenu'"></app-transfers>
+<app-adding-transfers-items *ngIf="creatingrevenu === 'creating-revenuitem'"></app-adding-transfers-items>

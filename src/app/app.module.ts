@@ -17,6 +17,12 @@ import { RevenuListComponent } from './revenus/revenu-list/revenu-list.component
 import { RevenuItemComponent } from './revenus/revenu-list/revenu-item/revenu-item.component';
 import { AddingRevenusItemsComponent } from './adding-revenus-items/adding-revenus-items.component';
 import { EdditingRevenusItemsComponent } from './adding-revenus-items/edditing-revenus-items/edditing-revenus-items.component';
+import { TransfersComponent } from './transfers/transfers.component';
+import { TransferDetailComponent } from './transfers/transfer-detail/transfer-detail.component';
+import { TransferListComponent } from './transfers/transfer-list/transfer-list.component';
+import { TransferItemComponent } from './transfers/transfer-list/transfer-item/transfer-item.component';
+import { AddingTransfersItemsComponent } from './adding-transfers-items/adding-transfers-items.component';
+import { EdditingTransfersItemsComponent } from './adding-transfers-items/edditing-transfers-items/edditing-transfers-items.component';
 
 
 
@@ -36,7 +42,13 @@ import { EdditingRevenusItemsComponent } from './adding-revenus-items/edditing-r
     RevenuListComponent,
     RevenuItemComponent,
     AddingRevenusItemsComponent,
-    EdditingRevenusItemsComponent
+    EdditingRevenusItemsComponent,
+    TransfersComponent,
+    TransferDetailComponent,
+    TransferListComponent,
+    TransferItemComponent,
+    AddingTransfersItemsComponent,
+    EdditingTransfersItemsComponent
   ],
   imports: [
     BrowserModule,
