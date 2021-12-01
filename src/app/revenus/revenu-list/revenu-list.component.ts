@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output ,EventEmitter } from '@angular/core';
 import { Revenu } from '../revenu.model';
 
 @Component({
@@ -7,7 +7,8 @@ import { Revenu } from '../revenu.model';
   styleUrls: ['./revenu-list.component.css']
 })
 export class RevenuListComponent implements OnInit {
-
+  @Output() revenuWasSelected = new EventEmitter<Revenu>();
+  
     revenus: Revenu[] = [
       new Revenu(
         'A Test Revenu',
@@ -30,5 +31,9 @@ export class RevenuListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onRevenuSelected(revenu: Revenu) {
+    this.revenuWasSelected.emit(revenu);
+  }
+
 
 }

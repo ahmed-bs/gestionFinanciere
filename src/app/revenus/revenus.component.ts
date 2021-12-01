@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Revenu } from './revenu.model';
 
 @Component({
   selector: 'app-revenus',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./revenus.component.css']
 })
 export class RevenusComponent implements OnInit {
-
+  selectedRevenu!: Revenu;
   constructor() { }
 
   ngOnInit(): void {

@@ -15,5 +15,8 @@ export class AddingRevenusItemsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onRevenuItemAdded(revenuitem: RevenuItem) {
+    this.revenuitems.push(revenuitem);
+  }
 
 }

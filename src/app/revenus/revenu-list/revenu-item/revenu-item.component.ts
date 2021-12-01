@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output ,Input,EventEmitter } from '@angular/core';
+import { Revenu } from '../../revenu.model';
 
 @Component({
   selector: 'app-revenu-item',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./revenu-item.component.css']
 })
 export class RevenuItemComponent implements OnInit {
+  @Input()
+  revenu!: Revenu;
 
-  constructor() { }
+  @Output()
+  revenuSelected = new EventEmitter<void>();
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onSelected() {
+    this.revenuSelected.emit();
   }
-
 }

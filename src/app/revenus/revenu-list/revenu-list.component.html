@@ -1,20 +1,12 @@
 <div class="row">
-    <div class="col-xs-12">
-      <button class="btn btn-success">New Revenu</button>
-    </div>
+  <div class="col-xs-12">
+    <button class="btn btn-success">New revenu</button>
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <a href="#" class="list-groupe-item clearfix" *ngFor="let revenu of revenus">
-        <div class="pull-left">
-  
-          <h4 class="list-groupe-item-heading" name>{{ revenu.name }}</h4>
-          <p class="list-groupe-item-text">{{ revenu.description }}</p>
-        </div>
-         <span class=" pull-right">
-          <img [src]="revenu.imagePath" alt="{{ revenu.name }}"  class="img-responsive" style="max-height: 50px ;">
-        </span>
-      </a>
-      <app-revenu-item></app-revenu-item>
-    </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-revenu-item *ngFor="let revenuEl of revenus" [revenu]="revenuEl" (revenuSelected)="onRevenuSelected(revenuEl)">
+    </app-revenu-item>
   </div>
+</div>
