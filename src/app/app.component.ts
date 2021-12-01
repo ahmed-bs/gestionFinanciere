@@ -10,4 +10,16 @@ export class AppComponent {
   onNavigate(feature: string){
     this.loadedFeature=feature;
   }
+
+  loadedRevenu='revenu';
+  onNavigateRevenu(revenu: string){
+    this.loadedRevenu=revenu;
+  }
+  creatingrevenu='creating-revenuitem';
+  onNavigateRevenuC(revenu: string){
+    this.creatingrevenu=revenu;
+  }
+  
+
+
 }

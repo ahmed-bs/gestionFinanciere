@@ -11,6 +11,12 @@ import { DepenceListComponent } from './depences/depence-list/depence-list.compo
 import { DepenceItemComponent } from './depences/depence-list/depence-item/depence-item.component';
 import { AddingDepencesItemsComponent } from './adding-depences-items/adding-depences-items.component';
 import { EdditingDepencesItemsComponent } from './adding-depences-items/edditing-depences-items/edditing-depences-items.component';
+import { RevenusComponent } from './revenus/revenus.component';
+import { RevenuDetailComponent } from './revenus/revenu-detail/revenu-detail.component';
+import { RevenuListComponent } from './revenus/revenu-list/revenu-list.component';
+import { RevenuItemComponent } from './revenus/revenu-list/revenu-item/revenu-item.component';
+import { AddingRevenusItemsComponent } from './adding-revenus-items/adding-revenus-items.component';
+import { EdditingRevenusItemsComponent } from './adding-revenus-items/edditing-revenus-items/edditing-revenus-items.component';
 
 
 
@@ -24,7 +30,13 @@ import { EdditingDepencesItemsComponent } from './adding-depences-items/edditing
     DepenceListComponent,
     DepenceItemComponent,
     AddingDepencesItemsComponent,
-    EdditingDepencesItemsComponent
+    EdditingDepencesItemsComponent,
+    RevenusComponent,
+    RevenuDetailComponent,
+    RevenuListComponent,
+    RevenuItemComponent,
+    AddingRevenusItemsComponent,
+    EdditingRevenusItemsComponent
   ],
   imports: [
     BrowserModule,
