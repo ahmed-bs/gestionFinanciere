@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Depence } from '../depence.model';
 
 @Component({
@@ -24,8 +24,11 @@ export class DepenceListComponent implements OnInit {
       'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg'
     ),
   ];
-
+  @Output() depenceWasSelected = new EventEmitter<Depence>();
   constructor() {}
 
   ngOnInit(): void {}
+  onDepenceSelected(depence: Depence) {
+    this.depenceWasSelected.emit(depence);
+  }
 }
