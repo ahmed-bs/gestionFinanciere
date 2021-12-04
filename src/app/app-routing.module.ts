@@ -6,15 +6,18 @@ import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { DepencesComponent } from './depences/depences.component';
+import { AddingDepencesItemsComponent } from './adding-depences-items/adding-depences-items.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'depences', component: DepencesComponent },
+  { path: 'adding', component: AddingDepencesItemsComponent },
   { path: '**', component: NotfoundComponent }
-
-   ];
+];
 @NgModule({
 
   imports: [
