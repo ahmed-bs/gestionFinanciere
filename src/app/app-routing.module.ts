@@ -10,6 +10,8 @@ import { DepencesComponent } from './depences/depences.component';
 import { AddingDepencesItemsComponent } from './adding-depences-items/adding-depences-items.component';
 import { TransfersComponent } from './transfers/transfers.component';
 import { AddingTransfersItemsComponent } from './adding-transfers-items/adding-transfers-items.component';
+import { RevenusComponent } from './revenus/revenus.component';
+import { AddingRevenusItemsComponent } from './adding-revenus-items/adding-revenus-items.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'adding', component: AddingDepencesItemsComponent },
   { path: 'transfer', component: TransfersComponent },
   { path: 'transferAdding', component: AddingTransfersItemsComponent },
+  { path: 'revenu', component:RevenusComponent },
+  { path: 'revenuAdding', component: AddingRevenusItemsComponent },
   { path: '**', component: NotfoundComponent }
 ];
 @NgModule({
