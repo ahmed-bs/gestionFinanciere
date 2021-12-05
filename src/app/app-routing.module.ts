@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { DepencesComponent } from './depences/depences.component';
 import { AddingDepencesItemsComponent } from './adding-depences-items/adding-depences-items.component';
+import { TransfersComponent } from './transfers/transfers.component';
+import { AddingTransfersItemsComponent } from './adding-transfers-items/adding-transfers-items.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'depences', component: DepencesComponent },
   { path: 'adding', component: AddingDepencesItemsComponent },
+  { path: 'transfer', component: TransfersComponent },
+  { path: 'transferAdding', component: AddingTransfersItemsComponent },
   { path: '**', component: NotfoundComponent }
 ];
 @NgModule({
