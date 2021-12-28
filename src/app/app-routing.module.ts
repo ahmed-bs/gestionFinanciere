@@ -9,6 +9,10 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { CreateTransactionComponent } from './transaction/create-transaction/create-transaction.component';
 import { UpdateTransactionComponent } from './transaction/update-transaction/update-transaction.component';
 import { TransactionDetailsComponent } from './transaction/transaction-details/transaction-details.component';
+import { UtilisateurListComponent } from './user/utilisateur-list/utilisateur-list.component';
+import { CreateUtilisateurComponent } from './user/create-utilisateur/create-utilisateur.component';
+import { UpdateUtilisateurComponent } from './user/update-utilisateur/update-utilisateur.component';
+import { UtilisateurDetailsComponent } from './user/utilisateur-details/utilisateur-details.component';
 const routes: Routes = [
   { path: '', component: TransactionComponent },
   { path: 'about', component: AboutComponent },
@@ -16,7 +20,10 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
 
-
+  { path: 'utilisateur', component: UtilisateurListComponent },
+  { path: 'addUtilisateur', component: CreateUtilisateurComponent },
+  { path: 'updateUtilisateur/:id', component: UpdateUtilisateurComponent },
+  { path: 'Utilisateurdetails/:id', component:  UtilisateurDetailsComponent },
   { path: 'transaction', component: TransactionComponent },
   { path: 'addtransaction', component: CreateTransactionComponent },
   { path: 'updateTransaction/:id', component: UpdateTransactionComponent },

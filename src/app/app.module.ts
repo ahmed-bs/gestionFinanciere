@@ -11,6 +11,10 @@ import { CreateTransactionComponent } from './transaction/create-transaction/cre
 import { TransactionDetailsComponent } from './transaction/transaction-details/transaction-details.component';
 import { TransactionsStatComponent } from './transaction/transactions-stat/transactions-stat.component';
 import { UpdateTransactionComponent } from './transaction/update-transaction/update-transaction.component';
+import { CreateUtilisateurComponent } from './user/create-utilisateur/create-utilisateur.component';
+import { UpdateUtilisateurComponent } from './user/update-utilisateur/update-utilisateur.component';
+import { UtilisateurDetailsComponent } from './user/utilisateur-details/utilisateur-details.component';
+import { UtilisateurListComponent } from './user/utilisateur-list/utilisateur-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { UpdateTransactionComponent } from './transaction/update-transaction/upd
     TransactionDetailsComponent,
     TransactionsStatComponent,
     UpdateTransactionComponent,
+    CreateUtilisateurComponent,
+    UpdateUtilisateurComponent,
+    UtilisateurDetailsComponent,
+    UtilisateurListComponent,
   ],
   imports: [
     FormsModule,
