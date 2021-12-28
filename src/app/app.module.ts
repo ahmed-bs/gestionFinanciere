@@ -15,6 +15,10 @@ import { CreateUtilisateurComponent } from './user/create-utilisateur/create-uti
 import { UpdateUtilisateurComponent } from './user/update-utilisateur/update-utilisateur.component';
 import { UtilisateurDetailsComponent } from './user/utilisateur-details/utilisateur-details.component';
 import { UtilisateurListComponent } from './user/utilisateur-list/utilisateur-list.component';
+import { CategoryDetailsComponent } from './category/category-details/category-details.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import { CreateCategoryComponent } from './category/create-category/create-category.component';
+import { UpdateCategoryComponent } from './category/update-category/update-category.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { UtilisateurListComponent } from './user/utilisateur-list/utilisateur-li
     UpdateUtilisateurComponent,
     UtilisateurDetailsComponent,
     UtilisateurListComponent,
+    CategoryDetailsComponent,
+    CategoryListComponent,
+    CreateCategoryComponent,
+    UpdateCategoryComponent,
   ],
   imports: [
     FormsModule,

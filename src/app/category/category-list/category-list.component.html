@@ -1,0 +1,23 @@
+<div class ="container">
+    <div class = "card">
+      <h3 class="text-center">User List</h3>
+      <div class = "card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>category-name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let category of categories | async">
+              <td>{{category.idcat}}</td>
+              <td>{{category.nomCat}}</td>
+              <td><button (click)="deleteCategory(category.idcat)" class="btn btn-danger">Delete</button>
+                  <button (click)="CategoryDetails(category.idcat)" class="btn btn-info" style="margin-left: 10px">Details</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

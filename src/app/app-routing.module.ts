@@ -13,6 +13,10 @@ import { UtilisateurListComponent } from './user/utilisateur-list/utilisateur-li
 import { CreateUtilisateurComponent } from './user/create-utilisateur/create-utilisateur.component';
 import { UpdateUtilisateurComponent } from './user/update-utilisateur/update-utilisateur.component';
 import { UtilisateurDetailsComponent } from './user/utilisateur-details/utilisateur-details.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import { CreateCategoryComponent } from './category/create-category/create-category.component';
+import { UpdateCategoryComponent } from './category/update-category/update-category.component';
+import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 const routes: Routes = [
   { path: '', component: TransactionComponent },
   { path: 'about', component: AboutComponent },
@@ -28,7 +32,10 @@ const routes: Routes = [
   { path: 'addtransaction', component: CreateTransactionComponent },
   { path: 'updateTransaction/:id', component: UpdateTransactionComponent },
   { path: 'transactiondetails/:id', component:  TransactionDetailsComponent },
-
+  { path: 'category', component: CategoryListComponent },
+  { path: 'addcategory', component: CreateCategoryComponent },
+  { path: 'updateCategory/:id', component: UpdateCategoryComponent },
+  { path: 'categorydetails/:id', component:  CategoryDetailsComponent },
   { path: '**', component: NotfoundComponent },
 ];
 @NgModule({
