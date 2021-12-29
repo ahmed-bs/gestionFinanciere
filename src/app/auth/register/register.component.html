@@ -1,0 +1,95 @@
+
+    <div class="login-box">
+
+        <!-- /.login-logo -->
+        <div class="card" >
+          <div class="card-body login-card-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+      
+            <form [formGroup]="registerForm" (ngSubmit)="signupUser()">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" formControlName="nom"  class="form-control" placeholder="nom">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" formControlName="prenom" class="form-control" placeholder="prenom">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" formControlName="username" class="form-control" placeholder="username">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" formControlName="adresse" class="form-control" placeholder="username">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="telephone" formControlName="telephone" class="form-control" placeholder="telephone">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" formControlName="password" class="form-control" placeholder="Password">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" formControlName="confirm_password" class="form-control" placeholder="confirm password">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+ 
+                <!-- /.col -->
+                <div class="col-4">
+                  <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                </div>
+                <!-- /.col -->
+              </div>
+            </form>
+  
+            <!-- /.social-auth-links -->
+      
+
+            <p class="mb-0">
+              <a routerLink="/auth/login" routerLinkActive="router-link-active"  class="text-center">I have an account login</a>
+            </p>
+          </div>
+          <!-- /.login-card-body -->
+        </div>
+      </div>
+      <!-- /.login-box -->
+     

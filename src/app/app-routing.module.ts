@@ -3,7 +3,7 @@ import {AboutComponent} from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './login/login.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { CreateTransactionComponent } from './transaction/create-transaction/create-transaction.component';
