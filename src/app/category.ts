@@ -1,4 +1,4 @@
 export class Category {
-   idcat:number;	
+   _id:string;	
    nomCat:string;
 }

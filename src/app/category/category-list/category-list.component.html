@@ -1,6 +1,6 @@
 <div class ="container">
     <div class = "card">
-      <h3 class="text-center">User List</h3>
+      <h1 class="text-center">category List</h1>
       <div class = "card-body">
         <table class="table table-striped">
           <thead>
@@ -11,10 +11,10 @@
           </thead>
           <tbody>
             <tr *ngFor="let category of categories | async">
-              <td>{{category.idcat}}</td>
+              <td>{{category._id}}</td>
               <td>{{category.nomCat}}</td>
-              <td><button (click)="deleteCategory(category.idcat)" class="btn btn-danger">Delete</button>
-                  <button (click)="CategoryDetails(category.idcat)" class="btn btn-info" style="margin-left: 10px">Details</button>
+              <td><button (click)="deleteCategory(category._id)" class="btn btn-danger">Delete</button>
+                  <button (click)="CategoryDetails(category._id)" class="btn btn-info" style="margin-left: 10px">Details</button>
               </td>
             </tr>
           </tbody>

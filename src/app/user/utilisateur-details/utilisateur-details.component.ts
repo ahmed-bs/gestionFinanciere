@@ -1,7 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import { Utilisateur } from 'src/app/utilisateur';
 import { Router, ActivatedRoute } from '@angular/router';
-import { UtilisateurService } from 'src/app/utilisateur.service';
+import { UtilisateurService } from 'src/app/services/utilisateur.service';
 @Component({
   selector: 'app-utilisateur-details',
   templateUrl: './utilisateur-details.component.html',
@@ -10,7 +10,7 @@ import { UtilisateurService } from 'src/app/utilisateur.service';
 export class UtilisateurDetailsComponent implements OnInit {
 
 
-  id: number;
+  id: string;
   utilisateur: Utilisateur;
 
   constructor(private route: ActivatedRoute,private router: Router,

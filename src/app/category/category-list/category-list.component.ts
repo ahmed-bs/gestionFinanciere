@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from "rxjs";
 import { Category } from 'src/app/category';
-import { CategoryService } from 'src/app/category.service';
+import { CategoryService } from 'src/app/services/category.service';
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
@@ -19,7 +19,7 @@ export class CategoryListComponent implements OnInit {
   reloadData() {
     this.categories = this.categoryService.getCategoriesList();
   }
-  deleteCategory(idcat: number) {
+  deleteCategory(idcat: string) {
     this.categoryService.deleteCategory(idcat)
       .subscribe(
         (        data) => {
@@ -29,8 +29,8 @@ export class CategoryListComponent implements OnInit {
         (error) => console.log(error));
   }
 
-  CategoryDetails(idcat: number){
-    this.router.navigate(['categorydetails', idcat]);
+  CategoryDetails(idcat: string){
+    this.router.navigate(['categorydetails',idcat]);
   }
 
 }

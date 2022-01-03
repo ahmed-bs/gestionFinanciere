@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from "rxjs";
 import { Utilisateur } from 'src/app/utilisateur';
-import { UtilisateurService } from 'src/app/utilisateur.service';
+import { UtilisateurService } from 'src/app/services/utilisateur.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-utilisateur-list',
@@ -19,8 +19,8 @@ export class UtilisateurListComponent implements OnInit {
   reloadData() {
     this.utilisateurs = this.userService.getUtilisateursList();
   }
-  deleteUtilisateur(id: number) {
-    this.userService.deleteUtilisateur(id)
+  deleteUtilisateur(_id: string) {
+    this.userService.deleteUtilisateur(_id)
       .subscribe(
         (        data) => {
           console.log(data);
@@ -29,7 +29,7 @@ export class UtilisateurListComponent implements OnInit {
         (error) => console.log(error));
   }
 
-  UtilisateurDetails(id: number){
-    this.router.navigate(['Utilisateurdetails', id]);
+  UtilisateurDetails(_id: string){
+    this.router.navigate(['Utilisateurdetails', _id]);
   }
 }

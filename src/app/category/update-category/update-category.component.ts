@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/category';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CategoryService } from 'src/app/category.service';
+import { CategoryService } from 'src/app/services/category.service';
 @Component({
   selector: 'app-update-category',
   templateUrl: './update-category.component.html',
   styleUrls: ['./update-category.component.css']
 })
 export class UpdateCategoryComponent implements OnInit {
-  idcat: number;
+  idcat: string;
   category: Category;
   submitted = false;
   constructor(private route: ActivatedRoute,private router: Router,
@@ -17,7 +17,7 @@ export class UpdateCategoryComponent implements OnInit {
   ngOnInit() {
     this.category = new Category();
 
-    this.idcat = this.route.snapshot.params['idcat'];
+    this.idcat = this.route.snapshot.params['id'];
     
     this.categoryService.getCategory(this.idcat)
       .subscribe(data => {

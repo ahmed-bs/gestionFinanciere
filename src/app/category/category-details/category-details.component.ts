@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/category';
 import { Router, ActivatedRoute } from '@angular/router';
-import { CategoryService } from 'src/app/category.service';
+import { CategoryService } from 'src/app/services/category.service';
 @Component({
   selector: 'app-category-details',
   templateUrl: './category-details.component.html',
@@ -10,7 +10,7 @@ import { CategoryService } from 'src/app/category.service';
 export class CategoryDetailsComponent implements OnInit {
 
 
-  idcat: number;
+  idcat: string;
   category: Category;
 
   constructor(private route: ActivatedRoute,private router: Router,
@@ -19,7 +19,7 @@ export class CategoryDetailsComponent implements OnInit {
   ngOnInit() {
     this.category = new Category();
 
-    this.idcat = this.route.snapshot.params['idcat'];
+    this.idcat = this.route.snapshot.params['id'];
     
     this.categoryService.getCategory(this.idcat)
       .subscribe(data => {
@@ -28,7 +28,7 @@ export class CategoryDetailsComponent implements OnInit {
       }, error => console.log(error));
   }
   update(){
-    this.router.navigate(['updateCategory/',this.idcat]);
+    this.router.navigate(['updateCategory',this.idcat]);
   }
   list(){
     this.router.navigate(['category']);

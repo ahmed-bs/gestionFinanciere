@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Utilisateur } from 'src/app/utilisateur';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UtilisateurService } from 'src/app/utilisateur.service';
+import { UtilisateurService } from 'src/app/services/utilisateur.service';
 @Component({
   selector: 'app-update-utilisateur',
   templateUrl: './update-utilisateur.component.html',
@@ -9,7 +9,7 @@ import { UtilisateurService } from 'src/app/utilisateur.service';
 })
 export class UpdateUtilisateurComponent implements OnInit {
 
-  id: number;
+  id: string;
   utilisateur: Utilisateur;
   submitted = false;
   constructor(private route: ActivatedRoute,private router: Router,

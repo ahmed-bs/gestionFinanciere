@@ -1,1 +1,18 @@
-<p>category-details works!</p>
+<div class="container">
+<h2>Category Details</h2> 
+<br>
+<div *ngIf="category">
+  <div>
+    <label><b>ID: </b></label> {{category._id}}
+  </div>
+  <div>
+    <label><b>Category Name: </b></label> {{category.nomCat}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Category List</button>
+<button (click)="update()" class="btn btn-info" style="margin-left: 10px">Update</button>
+<br>
+</div>

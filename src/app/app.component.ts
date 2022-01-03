@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,22 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title:string = 'gets';
-  loadedFeature='depence';
+islog : number;
 
-  onNavigate(feature: string){
-    this.loadedFeature=feature;
-  }
-
-  loadedRevenu='revenu';
-  onNavigateRevenu(revenu: string){
-    this.loadedRevenu=revenu;
-  }
-  creatingrevenu='creating-revenuitem';
-  onNavigateRevenuC(revenu: string){
-    this.creatingrevenu=revenu;
-  }
-  
+  title = 'users';
+  public constructor(private myService: AuthService) {
+    this.islog= this.myService.islog;
+   
+}
 
 
 }
