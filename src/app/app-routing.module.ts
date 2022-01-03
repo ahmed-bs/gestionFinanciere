@@ -9,6 +9,14 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { CreateTransactionComponent } from './transaction/create-transaction/create-transaction.component';
 import { UpdateTransactionComponent } from './transaction/update-transaction/update-transaction.component';
 import { TransactionDetailsComponent } from './transaction/transaction-details/transaction-details.component';
+import { UtilisateurListComponent } from './user/utilisateur-list/utilisateur-list.component';
+import { CreateUtilisateurComponent } from './user/create-utilisateur/create-utilisateur.component';
+import { UpdateUtilisateurComponent } from './user/update-utilisateur/update-utilisateur.component';
+import { UtilisateurDetailsComponent } from './user/utilisateur-details/utilisateur-details.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import { CreateCategoryComponent } from './category/create-category/create-category.component';
+import { UpdateCategoryComponent } from './category/update-category/update-category.component';
+import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 const routes: Routes = [
   { path: '', component: TransactionComponent },
   { path: 'about', component: AboutComponent },
@@ -16,12 +24,18 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
 
-
+  { path: 'utilisateur', component: UtilisateurListComponent },
+  { path: 'addUtilisateur', component: CreateUtilisateurComponent },
+  { path: 'updateUtilisateur/:id', component: UpdateUtilisateurComponent },
+  { path: 'Utilisateurdetails/:id', component:  UtilisateurDetailsComponent },
   { path: 'transaction', component: TransactionComponent },
   { path: 'addtransaction', component: CreateTransactionComponent },
   { path: 'updateTransaction/:id', component: UpdateTransactionComponent },
   { path: 'transactiondetails/:id', component:  TransactionDetailsComponent },
-
+  { path: 'category', component: CategoryListComponent },
+  { path: 'addcategory', component: CreateCategoryComponent },
+  { path: 'updateCategory/:id', component: UpdateCategoryComponent },
+  { path: 'categorydetails/:id', component:  CategoryDetailsComponent },
   { path: '**', component: NotfoundComponent },
 ];
 @NgModule({
